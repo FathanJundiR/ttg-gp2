@@ -1,16 +1,15 @@
 import { useState } from "react";
 import LoginNavBar from "../Components/NavbarLogin";
 import mainLogo from "../assets/isometric-vr-game-headset-for-playing-video-games.gif";
-import axios from "axios"
+import axios from "axios";
 import { localUrl } from "../utils/baseUrl";
-
 
 export default function LoginPage() {
   const [visible, setVisible] = useState(false);
   const [register, setRegsiter] = useState(false);
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-
+  //check this section
   async function handleLogin(e) {
     e.preventDefault();
     try {
@@ -145,14 +144,14 @@ export default function LoginPage() {
         {register && (
           <div className="fixed inset-0 bg-slate-700 bg-opacity-60 flex justify-center items-center z-20">
             <div className="backdrop-blur-xl h-auto w-[25vw] rounded-lg border border-slate-400 p-6">
-            <div
-                  className="w-full h-[10%] flex justify-end items-start pr-4 text-slate-600 cursor-pointer text-white"
-                  onClick={() => {
-                    setRegsiter(false);
-                  }}
-                >
-                  x
-                </div>
+              <div
+                className="w-full h-[10%] flex justify-end items-start pr-4 text-slate-600 cursor-pointer text-white"
+                onClick={() => {
+                  setRegsiter(false);
+                }}
+              >
+                x
+              </div>
               <div className="flex justify-between items-center w-full mb-4">
                 <div
                   className="text-3xl text-slate-300 font-semibold text-center w-full"
@@ -213,7 +212,8 @@ export default function LoginPage() {
               </form>
             </div>
           </div>
-        )}...
+        )}
+        ...
       </div>
     </>
   );
